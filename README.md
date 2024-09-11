@@ -193,10 +193,6 @@ following entities are supported:
   it
   automatically. It must be done manually through a third-party tool or command line.
 
-## Tests
-
-> Describe and show how to run the tests with code examples.
-
 ## Contributions
 
 Contributions to Zephyr Squad to Scale Migration script are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for
