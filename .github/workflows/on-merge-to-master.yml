@@ -1,0 +1,28 @@
+name: Build On Merge To Master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out code
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: '17'
+          cache: maven
+      - name: Run Build with Maven
+        run: mvn -B clean package
+      - name: Prepare build
+        run: mkdir dist && cp target/*.jar dist
+      - name: Deploy Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Executable
+          path: dist

@@ -1,6 +1,3 @@
-> Please remove this quote block and replace the others with meaningful content. If you're looking at this on Bitbucket,
-> be assured that it looks great on GitHub.
-
 # Zephyr Squad to Scale Migration script
 
 [![Atlassian license](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
@@ -156,6 +153,14 @@ postgresql.datasource.password=some_password
 The Script must be run inside an Instance/Node running Jira. That is the case because it directly copies Attachments
 from one directory to another. To do, you must move the JAR file alongside both `app.properties`
 and `database.properties` (already configured) to the Jira host.
+
+## Project build
+
+The project is built using Maven and to run unit tests and build the `jar` you can run the following command:
+
+```bash
+mvn clean package
+```
 
 ## Documentation
 
