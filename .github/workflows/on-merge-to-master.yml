@@ -3,7 +3,7 @@ name: Build On Merge To Master
 on:
   push:
     branches:
-      - build-trigger-cd
+      - master
 
 jobs:
   build:
